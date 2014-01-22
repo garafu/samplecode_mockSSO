@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<table>
+    <tr>
+        <th>ユーザーID</th>
+        <td><input type="text" id="id" /></td>
+    </tr>
+    <tr>
+        <th>パスワード</th>
+        <td><input type="password" id="password" /></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <label>
+                <input type="checkbox" id="rememberMe" />
+                ログインしたままにする。
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align:right;">
+            <input type="submit" id="submit" value="ログイン" />
+        <td>
+    </tr>
+</table>
+
+@Html.AntiForgeryToken()
+
+<div style="display:none; visibility:hidden;">
+    <script type="text/javascript" src="../../Scripts/lib/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/lib/querystring.js"></script>
+    <script type="text/javascript" src="../../Scripts/account/login.js"></script>
+</div>
